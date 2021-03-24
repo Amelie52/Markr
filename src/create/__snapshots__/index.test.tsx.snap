@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/create should renders create page 1`] = `
+<div>
+  <div
+    class="sc-hKgILt hawdUi"
+  >
+    <h1
+      class="sc-eCssSg eIJRzY"
+    >
+      Ajouter un lien en favoris
+    </h1>
+    <button
+      class="sc-dlfnbm fBkHHK"
+    >
+      Revenir sur la page précédente
+    </button>
+    <div
+      data-mock="bookmark-form"
+    >
+      <button
+        data-testid="bookmark-form-submit-button"
+        type="button"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;

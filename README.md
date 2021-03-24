@@ -2,6 +2,14 @@
 
 A bookmark application.
 
+## About Markr
+
+The Main view is composed of bookmarks list. A pagination appears when there are more than 3 bookmarks on the list.
+
+You can add, edit and delete a bookmark and it can be linked to tags.
+
+<img width="1436" alt="Capture d’écran 2021-03-24 à 03 44 38" src="https://user-images.githubusercontent.com/21146372/112246633-4b64bf00-8c53-11eb-834f-ccb38c606f7f.png">
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -26,8 +34,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-## About Markr
-
-The Main view is composed of bookmarks list. A pagination appears when there are more than 3 bookmarks on the list.
-
-You can add, edit and delete a bookmark and it can be linked to tags.

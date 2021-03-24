@@ -1,4 +1,4 @@
-import { Action } from "./actions";
+import { Action, BOOKMARK, TAGS } from "./actions";
 import { Bookmark, Tag } from "./interfaces";
 
 export type State = {
@@ -13,9 +13,9 @@ export const initialState = {
 
 export function mainReducer(state: State = initialState, action: Action): State {
     switch (action.type) {
-        case 'app/BOOKMARK/CREATE':
+        case BOOKMARK.CREATE:
             return { ...state, bookmarks: [...state.bookmarks, { ...action.bookmark, tags: action.tags }] };
-        case 'app/BOOKMARK/EDIT':
+        case BOOKMARK.EDIT:
             return {
                 ...state,
                 bookmarks: state.bookmarks.map((bookmark) => {
@@ -28,14 +28,14 @@ export function mainReducer(state: State = initialState, action: Action): State 
                     return bookmark;
                 }),
             };
-        case 'app/BOOKMARK/DELETE':
+        case BOOKMARK.DELETE:
             return {
                 ...state,
                 bookmarks: state.bookmarks.filter((bookmark) => {
                     return bookmark.id !== action.bookmarkId;
                 }),
             };
-        case 'app/TAGS/CREATE':
+        case TAGS.CREATE:
             const newTags = action.tags.filter(tag => {
                 return !state.tags.some(e => tag.value === e.value)
             })

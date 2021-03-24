@@ -18,7 +18,7 @@ export const BookmarkForm = ({ onSubmit, isLoading = false, url, tags }: Props) 
     const [tagsValue, setTagsValue] = useState(tags ? tags : []);
     const [urlValue, setUrlValue] = useState(url ? url : "");
     const [error, setError] = useState("");
-    const urlError = "Veuillez renseigner l'url"
+    const urlError = "Veuillez renseigner l'url";
 
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();

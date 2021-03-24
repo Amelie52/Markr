@@ -39,11 +39,11 @@ export const Home = () => {
 
     const pages = Math.ceil(state.bookmarks.length / pageSize);
 
-    const getPagination = () => {
-        let pagination = [];
+    const getPaginationItems = () => {
+        let paginationItems = [];
 
         for (let i = 0; i < pages; i++) {
-            pagination.push(
+            paginationItems.push(
                 <PaginationItem key={`pagination-page-${i + 1}`}>
                     <PaginationButton
                         active={activePage === i}
@@ -58,7 +58,7 @@ export const Home = () => {
                 </PaginationItem>);
         }
 
-        return pagination;
+        return paginationItems;
     }
 
     return (
@@ -71,7 +71,7 @@ export const Home = () => {
                 <>
                     {pages > 1 && (
                         <PaginationList>
-                            {getPagination()}
+                            {getPaginationItems()}
                         </PaginationList>
                     )}
                     <BookmarkList>

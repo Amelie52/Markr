@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 
 import { MainContext } from "../app";
 import { createBookmark, createTags } from "../app/actions";
@@ -24,8 +24,8 @@ export const Create = () => {
             dispatch(createTags(tags))
             setIsLoading(false);
             history.push('/');
-        } catch (e) {
-            console.error(e.message)
+        } catch (error) {
+            console.error(error.message)
             setIsLoading(false);
         }
     }

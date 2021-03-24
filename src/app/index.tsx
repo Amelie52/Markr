@@ -2,7 +2,7 @@ import { createContext, Dispatch, useMemo, useReducer } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled, { createGlobalStyle, DefaultTheme, ThemeProvider } from 'styled-components';
 
-import logo from '../images/favicon-32x32.png';
+import logo from '../images/logo.png';
 import { State, mainReducer, initialState } from './reducer';
 import Create from '../create';
 import Edit from '../edit';
@@ -15,8 +15,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: .625em; /* fallback IE8+ */
-    font-size: calc(1em * .625); /* IE9-IE11 math fixing */
+    font-size: .625em;
+    font-size: calc(1em * .625);
   }
   
   body {
@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme: DefaultTheme = {
+export const theme: DefaultTheme = {
   colors: {
     PRIMARY_COLOR: "#FD4586",
     SECONDARY_COLOR: "#fe7c65",
@@ -138,14 +138,14 @@ export const App = () => {
         <Main role="main">
           <Router>
             <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
               <Route path="/add">
                 <Create />
               </Route>
               <Route path="/edit/:bookmarkId">
                 <Edit />
-              </Route>
-              <Route path="/">
-                <Home />
               </Route>
             </Switch>
           </Router>
