@@ -3,15 +3,15 @@
 exports[`src/create should renders create page 1`] = `
 <div>
   <div
-    class="sc-hKgILt hawdUi"
+    class="sc-hKgILt PnehK"
   >
     <h1
-      class="sc-eCssSg eIJRzY"
+      class="sc-eCssSg kLLfpA"
     >
       Ajouter un lien en favoris
     </h1>
     <button
-      class="sc-dlfnbm fBkHHK"
+      class="sc-dlfnbm bpTVga"
     >
       Revenir sur la page précédente
     </button>
