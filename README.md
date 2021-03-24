@@ -4,7 +4,7 @@ A bookmark application.
 
 ## About Markr
 
-The Main view is composed of bookmarks list. A pagination appears when there are more than 3 bookmarks on the list.
+The Main view is composed of bookmarks list. A pagination appears when there are more than 3 bookmarks in the list.
 
 You can add, edit and delete a bookmark and it can be linked to tags.
 
