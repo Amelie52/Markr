@@ -24,12 +24,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier -l 'src/**/*.{ts,tsx,js,json}'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prettier"
     ]
   },
   "browserslist": {
@@ -47,6 +52,9 @@
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7",
     "@types/react-select": "^4.0.13",
-    "@types/styled-components": "^5.1.9"
+    "@types/styled-components": "^5.1.9",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-prettier": "3.3.1",
+    "prettier": "2.2.1"
   }
 }

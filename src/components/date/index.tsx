@@ -1,8 +1,8 @@
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
-require("dayjs/locale/fr");
+require('dayjs/locale/fr');
 
-dayjs.locale("fr");
+dayjs.locale('fr');
 
 type Props = {
   date: Date;
@@ -10,12 +10,8 @@ type Props = {
 
 const Date = ({ date }: Props) => {
   return (
-    <time dateTime={dayjs(date).format()}>
-      {dayjs(date)
-        .locale("fr")
-        .format("D MMMM YYYY")}
-    </time>
+    <time dateTime={dayjs(date).format()}>{dayjs(date).locale('fr').format('D MMMM YYYY')}</time>
   );
-}
+};
 
 export default Date;
