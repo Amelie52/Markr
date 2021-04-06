@@ -124,12 +124,8 @@ export const App = () => {
   const [state, dispatch] = useReducer(mainReducer, initialState);
   const date = new Date();
 
-  const contextValue = useMemo(() => {
-    return { state, dispatch };
-  }, [state, dispatch]);
-
   return (
-    <MainContext.Provider value={contextValue as ContextProps}>
+    <MainContext.Provider value={{ state, dispatch } as ContextProps}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header role="banner">
